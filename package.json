@@ -1,0 +1,19 @@
+{
+  "name": "plp-demo",
+  "version": "1.0.0",
+  "description": "Product Listing Page",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smokku/plp-demo.git"
+  },
+  "author": "Tomasz Sterna <tomek@xiaoka.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smokku/plp-demo/issues"
+  },
+  "homepage": "https://github.com/smokku/plp-demo#readme"
+}
