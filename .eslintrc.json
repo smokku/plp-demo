@@ -1,0 +1,55 @@
+{
+  "plugins": [
+    "babel",
+    "react",
+    "jest",
+    "flowtype",
+    "unicorn"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:jest/recommended",
+    "plugin:flowtype/recommended",
+    "plugin:unicorn/recommended",
+    "standard-jsdoc",
+    "standard-react",
+    "standard",
+    "airbnb"
+  ],
+  "parser": "babel-eslint",
+  "settings": {
+    "import/resolver": "webpack"
+  },
+  "env": {
+    "jest/globals": true,
+    "browser": true,
+    "es6": true
+  },
+  "rules": {
+    "semi": ["error", "never"],
+    "no-invalid-this": "off",
+    "babel/no-invalid-this": "error",
+    "max-len": ["error", { "code": 130 }],
+    "require-jsdoc": ["error", {
+      "require": {
+          "FunctionDeclaration": true,
+          "MethodDefinition": false,
+          "ClassDeclaration": true,
+          "ArrowFunctionExpression": false,
+          "FunctionExpression": false
+      }
+    }],
+    "valid-jsdoc": [
+      "warn",
+      {
+        "requireParamType": false,
+        "requireReturn": false,
+        "requireReturnType": false,
+        "requireReturnDescription": false
+      }
+    ],
+    "jsdoc/require-param-type": "off",
+    "jsdoc/require-returns-type": "off",
+    "jsdoc/require-returns-description": "off"
+  }
+}

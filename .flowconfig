@@ -1,0 +1,25 @@
+[ignore]
+<PROJECT_ROOT>/node_modules/bcryptjs/.*
+<PROJECT_ROOT>/dist/.*
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+emoji=true
+esproposal.decorators=ignore
+esproposal.optional_chaining=enable
+experimental.const_params=true
+
+[strict]
+nonstrict-import
+unclear-type
+unsafe-getters-setters
+untyped-import
+untyped-type-import
+sketchy-null
+
+# https://www.saltycrane.com/flow-type-cheat-sheet/latest/
