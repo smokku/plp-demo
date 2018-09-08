@@ -1,6 +1,7 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
+const pkg = require('./package.json')
 
 module.exports = {
   entry: ['./src/index.jsx'],
@@ -65,8 +66,9 @@ module.exports = {
       filename: 'main-[hash].css',
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src', 'index.html'),
       filename: 'index.html',
+      title: pkg.description,
+      meta: { viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
     }),
   ],
   performance: {

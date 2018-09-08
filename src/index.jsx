@@ -4,13 +4,13 @@ import ReactDOM from 'react-dom'
 import UIkit from 'uikit'
 import Icons from 'uikit/dist/js/uikit-icons'
 
+import Main from './views/main'
 import './index.scss'
 
 UIkit.use(Icons)
 
-const root = document.getElementById('root')
-if (root) {
-  ReactDOM.render(<div />, root)
+if (document.body) {
+  ReactDOM.render(<Main />, document.body.appendChild(document.createElement('div')))
 } else {
-  window.console.error('No #root element found!')
+  window.console.error('No BODY element found!')
 }
