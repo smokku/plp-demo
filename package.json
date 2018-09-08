@@ -13,7 +13,7 @@
   },
   "homepage": "https://github.com/smokku/plp-demo#readme",
   "scripts": {
-    "build": "webpack --config ./webpack.config.js --mode production",
+    "build": "rm -rf ./docs && NODE_ENV=production webpack --config ./webpack.config.js --mode production",
     "start": "webpack-dev-server --config ./webpack.config.js --mode development",
     "lint": "eslint ./src ./webpack.config.js -f table --ext .js --ext .jsx",
     "pretest": "npm run-script lint",
