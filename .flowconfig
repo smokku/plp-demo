@@ -13,6 +13,7 @@ emoji=true
 esproposal.decorators=ignore
 esproposal.optional_chaining=enable
 experimental.const_params=true
+module.name_mapper='^.*\.s?css$' -> 'css-module-flow'
 
 [strict]
 nonstrict-import

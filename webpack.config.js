@@ -12,12 +12,12 @@ module.exports = {
         use: ['babel-loader'],
       },
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-          },
+          // fallback to style-loader in development
+          process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
+          'sass-loader',
         ],
       },
       {
