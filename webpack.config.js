@@ -54,7 +54,6 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'docs'),
-    publicPath: '/',
     filename: 'main-[hash].js',
   },
   devServer: {
