@@ -1,7 +1,7 @@
 // @flow
 import { combineReducers } from 'redux'
 
-export const types = {
+const types = {
   SET_CATEGORY_FILTERS: 'plp/filters/SET_CATEGORY_FILTERS',
   SET_COLOR_FILTERS: 'plp/filters/SET_COLOR_FILTERS',
 }
