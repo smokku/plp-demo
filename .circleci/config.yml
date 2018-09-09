@@ -1,0 +1,41 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:10-browsers
+    steps:
+      - checkout
+      - restore_cache:
+          name: Restore NPM Package Cache
+          keys:
+            - npm-packages-{{ .Branch }}-{{ checksum "package.json" }}
+            - npm-packages-{{ .Branch }}
+            - npm-packages-master
+            - npm-packages-
+      - run:
+          name: Install Dependencies
+          command: npm install
+      - save_cache:
+          name: Save NPM Package Cache
+          key: npm-packages-{{ .Branch }}-{{ checksum "package.json" }}
+          paths:
+            - node_modules/
+      - run:
+          name: Build
+          command: npm run build
+      - deploy:
+          name: Commit docs/ as site
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              git config credential.helper 'cache --timeout=120'
+              git config user.email "<email>"
+              git config user.name "Deployment Bot"
+              git add docs/
+              git commit --allow-empty -m "Trigger deployment"
+              # Push quietly to prevent showing the token in log
+              git push -q https://${DOCS_GITHUB_TOKEN}@github.com/smokku/plp-demo.git master
+            fi
