@@ -39,6 +39,8 @@ const reducer = (state: Items = [], action: Action): Items => {
     case LOAD_ITEMS_DATA:
       return characters.map(item => ({
         ...item,
+        // eslint-disable-next-line global-require, import/no-dynamic-require, $FlowFixMe
+        svg: require(`../../data/svg/${item.image}.svg`),
         category: randCategory(),
         colors: randColors(),
       }))

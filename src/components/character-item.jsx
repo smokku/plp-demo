@@ -5,7 +5,7 @@ import classNames from 'classnames'
 type Props = {|
   className?: string,
   name: string,
-  image: string,
+  svg: string,
   category: string,
   colors: Array<{ [string]: number }>,
 |}
@@ -20,16 +20,14 @@ class CharacterItem extends React.PureComponent<Props> {
 
   render() {
     const {
-      className, name, image, category,
+      className, name, svg, category,
     } = this.props
     return (
       <div className={classNames('uk-card uk-card-default', className)}>
         <div className="uk-card-header">
           <h3 className="uk-card-title">{name}</h3>
         </div>
-        <div className="uk-card-body">
-          <img src={image} uk-svg="" alt={name} />
-        </div>
+        <div className="uk-card-body" dangerouslySetInnerHTML={{ __html: svg }} />
         <div className="uk-card-footer">{category}</div>
       </div>
     )

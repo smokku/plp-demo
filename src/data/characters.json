@@ -1,202 +1,202 @@
 [
   {
     "name": "Centaur",
-    "image": "svg/001-centaur.svg"
+    "image": "001-centaur"
   },
   {
     "name": "Kraken",
-    "image": "svg/002-kraken.svg"
+    "image": "002-kraken"
   },
   {
     "name": "Dinosaur",
-    "image": "svg/003-dinosaur.svg"
+    "image": "003-dinosaur"
   },
   {
     "name": "Tree",
-    "image": "svg/004-tree-1.svg"
+    "image": "004-tree-1"
   },
   {
     "name": "Hand",
-    "image": "svg/005-hand.svg"
+    "image": "005-hand"
   },
   {
     "name": "Echidna",
-    "image": "svg/006-echidna.svg"
+    "image": "006-echidna"
   },
   {
     "name": "Robot",
-    "image": "svg/007-robot.svg"
+    "image": "007-robot"
   },
   {
     "name": "Mushroom",
-    "image": "svg/008-mushroom.svg"
+    "image": "008-mushroom"
   },
   {
     "name": "Harpy",
-    "image": "svg/009-harpy.svg"
+    "image": "009-harpy"
   },
   {
     "name": "Phoenix",
-    "image": "svg/010-phoenix.svg"
+    "image": "010-phoenix"
   },
   {
     "name": "Dragon",
-    "image": "svg/011-dragon-1.svg"
+    "image": "011-dragon-1"
   },
   {
     "name": "Devil",
-    "image": "svg/012-devil.svg"
+    "image": "012-devil"
   },
   {
     "name": "Troll",
-    "image": "svg/013-troll.svg"
+    "image": "013-troll"
   },
   {
     "name": "Alien",
-    "image": "svg/014-alien.svg"
+    "image": "014-alien"
   },
   {
     "name": "Minotaur",
-    "image": "svg/015-minotaur.svg"
+    "image": "015-minotaur"
   },
   {
     "name": "Madre Monte",
-    "image": "svg/016-madre-monte.svg"
+    "image": "016-madre-monte"
   },
   {
     "name": "Satyr",
-    "image": "svg/017-satyr.svg"
+    "image": "017-satyr"
   },
   {
     "name": "Karakasakozou",
-    "image": "svg/018-karakasakozou.svg"
+    "image": "018-karakasakozou"
   },
   {
     "name": "Pirate",
-    "image": "svg/019-pirate.svg"
+    "image": "019-pirate"
   },
   {
     "name": "Werewolf",
-    "image": "svg/020-werewolf.svg"
+    "image": "020-werewolf"
   },
   {
     "name": "Scarecrow",
-    "image": "svg/021-scarecrow.svg"
+    "image": "021-scarecrow"
   },
   {
     "name": "Valkyrie",
-    "image": "svg/022-valkyrie.svg"
+    "image": "022-valkyrie"
   },
   {
     "name": "Curupira",
-    "image": "svg/023-curupira.svg"
+    "image": "023-curupira"
   },
   {
     "name": "Nessie",
-    "image": "svg/024-loch-ness-monster.svg"
+    "image": "024-loch-ness-monster"
   },
   {
     "name": "Tree",
-    "image": "svg/025-tree.svg"
+    "image": "025-tree"
   },
   {
     "name": "Cerberus",
-    "image": "svg/026-cerberus.svg"
+    "image": "026-cerberus"
   },
   {
     "name": "Gryphon",
-    "image": "svg/027-gryphon.svg"
+    "image": "027-gryphon"
   },
   {
     "name": "Mermaid",
-    "image": "svg/028-mermaid.svg"
+    "image": "028-mermaid"
   },
   {
     "name": "Vampire",
-    "image": "svg/029-vampire.svg"
+    "image": "029-vampire"
   },
   {
     "name": "Goblin",
-    "image": "svg/030-goblin.svg"
+    "image": "030-goblin"
   },
   {
     "name": "Yeti",
-    "image": "svg/031-yeti.svg"
+    "image": "031-yeti"
   },
   {
     "name": "Leprechaun",
-    "image": "svg/032-leprechaun.svg"
+    "image": "032-leprechaun"
   },
   {
     "name": "Medusa",
-    "image": "svg/033-medusa.svg"
+    "image": "033-medusa"
   },
   {
     "name": "Chimera",
-    "image": "svg/034-chimera.svg"
+    "image": "034-chimera"
   },
   {
     "name": "Elf",
-    "image": "svg/035-elf.svg"
+    "image": "035-elf"
   },
   {
     "name": "Hydra",
-    "image": "svg/036-hydra.svg"
+    "image": "036-hydra"
   },
   {
     "name": "Cyclops",
-    "image": "svg/037-cyclops.svg"
+    "image": "037-cyclops"
   },
   {
     "name": "Pegasus",
-    "image": "svg/038-pegasus.svg"
+    "image": "038-pegasus"
   },
   {
     "name": "Narwhal",
-    "image": "svg/039-narwhal.svg"
+    "image": "039-narwhal"
   },
   {
     "name": "Woodcutter",
-    "image": "svg/040-woodcutter.svg"
+    "image": "040-woodcutter"
   },
   {
     "name": "Zombie",
-    "image": "svg/041-zombie.svg"
+    "image": "041-zombie"
   },
   {
     "name": "Dragon",
-    "image": "svg/042-dragon.svg"
+    "image": "042-dragon"
   },
   {
     "name": "Frankenstein",
-    "image": "svg/043-frankenstein.svg"
+    "image": "043-frankenstein"
   },
   {
     "name": "Witch",
-    "image": "svg/044-witch.svg"
+    "image": "044-witch"
   },
   {
     "name": "Fairy",
-    "image": "svg/045-fairy.svg"
+    "image": "045-fairy"
   },
   {
     "name": "Genie",
-    "image": "svg/046-genie.svg"
+    "image": "046-genie"
   },
   {
     "name": "Pinocchio",
-    "image": "svg/047-pinocchio.svg"
+    "image": "047-pinocchio"
   },
   {
     "name": "Ghost",
-    "image": "svg/048-ghost.svg"
+    "image": "048-ghost"
   },
   {
     "name": "Wizard",
-    "image": "svg/049-wizard.svg"
+    "image": "049-wizard"
   },
   {
     "name": "Unicorn",
-    "image": "svg/050-unicorn.svg"
+    "image": "050-unicorn"
   }
 ]
