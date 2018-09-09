@@ -6,7 +6,7 @@ import UIkit from 'uikit'
 import Icons from 'uikit/dist/js/uikit-icons'
 
 import configureStore from './state/store'
-import { loadMonstersData } from './state/ducks/monsters'
+import { loadItemsData } from './state/ducks/items'
 import Main from './views/main'
 import './index.scss'
 
@@ -14,7 +14,7 @@ UIkit.use(Icons)
 
 const store = configureStore()
 
-store.dispatch(loadMonstersData())
+store.dispatch(loadItemsData())
 
 if (document.body) {
   ReactDOM.render(

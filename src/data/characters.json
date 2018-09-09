@@ -1,0 +1,202 @@
+[
+  {
+    "name": "Centaur",
+    "image": "svg/001-centaur.svg"
+  },
+  {
+    "name": "Kraken",
+    "image": "svg/002-kraken.svg"
+  },
+  {
+    "name": "Dinosaur",
+    "image": "svg/003-dinosaur.svg"
+  },
+  {
+    "name": "Tree",
+    "image": "svg/004-tree-1.svg"
+  },
+  {
+    "name": "Hand",
+    "image": "svg/005-hand.svg"
+  },
+  {
+    "name": "Echidna",
+    "image": "svg/006-echidna.svg"
+  },
+  {
+    "name": "Robot",
+    "image": "svg/007-robot.svg"
+  },
+  {
+    "name": "Mushroom",
+    "image": "svg/008-mushroom.svg"
+  },
+  {
+    "name": "Harpy",
+    "image": "svg/009-harpy.svg"
+  },
+  {
+    "name": "Phoenix",
+    "image": "svg/010-phoenix.svg"
+  },
+  {
+    "name": "Dragon",
+    "image": "svg/011-dragon-1.svg"
+  },
+  {
+    "name": "Devil",
+    "image": "svg/012-devil.svg"
+  },
+  {
+    "name": "Troll",
+    "image": "svg/013-troll.svg"
+  },
+  {
+    "name": "Alien",
+    "image": "svg/014-alien.svg"
+  },
+  {
+    "name": "Minotaur",
+    "image": "svg/015-minotaur.svg"
+  },
+  {
+    "name": "Madre Monte",
+    "image": "svg/016-madre-monte.svg"
+  },
+  {
+    "name": "Satyr",
+    "image": "svg/017-satyr.svg"
+  },
+  {
+    "name": "Karakasakozou",
+    "image": "svg/018-karakasakozou.svg"
+  },
+  {
+    "name": "Pirate",
+    "image": "svg/019-pirate.svg"
+  },
+  {
+    "name": "Werewolf",
+    "image": "svg/020-werewolf.svg"
+  },
+  {
+    "name": "Scarecrow",
+    "image": "svg/021-scarecrow.svg"
+  },
+  {
+    "name": "Valkyrie",
+    "image": "svg/022-valkyrie.svg"
+  },
+  {
+    "name": "Curupira",
+    "image": "svg/023-curupira.svg"
+  },
+  {
+    "name": "Nessie",
+    "image": "svg/024-loch-ness-monster.svg"
+  },
+  {
+    "name": "Tree",
+    "image": "svg/025-tree.svg"
+  },
+  {
+    "name": "Cerberus",
+    "image": "svg/026-cerberus.svg"
+  },
+  {
+    "name": "Gryphon",
+    "image": "svg/027-gryphon.svg"
+  },
+  {
+    "name": "Mermaid",
+    "image": "svg/028-mermaid.svg"
+  },
+  {
+    "name": "Vampire",
+    "image": "svg/029-vampire.svg"
+  },
+  {
+    "name": "Goblin",
+    "image": "svg/030-goblin.svg"
+  },
+  {
+    "name": "Yeti",
+    "image": "svg/031-yeti.svg"
+  },
+  {
+    "name": "Leprechaun",
+    "image": "svg/032-leprechaun.svg"
+  },
+  {
+    "name": "Medusa",
+    "image": "svg/033-medusa.svg"
+  },
+  {
+    "name": "Chimera",
+    "image": "svg/034-chimera.svg"
+  },
+  {
+    "name": "Elf",
+    "image": "svg/035-elf.svg"
+  },
+  {
+    "name": "Hydra",
+    "image": "svg/036-hydra.svg"
+  },
+  {
+    "name": "Cyclops",
+    "image": "svg/037-cyclops.svg"
+  },
+  {
+    "name": "Pegasus",
+    "image": "svg/038-pegasus.svg"
+  },
+  {
+    "name": "Narwhal",
+    "image": "svg/039-narwhal.svg"
+  },
+  {
+    "name": "Woodcutter",
+    "image": "svg/040-woodcutter.svg"
+  },
+  {
+    "name": "Zombie",
+    "image": "svg/041-zombie.svg"
+  },
+  {
+    "name": "Dragon",
+    "image": "svg/042-dragon.svg"
+  },
+  {
+    "name": "Frankenstein",
+    "image": "svg/043-frankenstein.svg"
+  },
+  {
+    "name": "Witch",
+    "image": "svg/044-witch.svg"
+  },
+  {
+    "name": "Fairy",
+    "image": "svg/045-fairy.svg"
+  },
+  {
+    "name": "Genie",
+    "image": "svg/046-genie.svg"
+  },
+  {
+    "name": "Pinocchio",
+    "image": "svg/047-pinocchio.svg"
+  },
+  {
+    "name": "Ghost",
+    "image": "svg/048-ghost.svg"
+  },
+  {
+    "name": "Wizard",
+    "image": "svg/049-wizard.svg"
+  },
+  {
+    "name": "Unicorn",
+    "image": "svg/050-unicorn.svg"
+  }
+]

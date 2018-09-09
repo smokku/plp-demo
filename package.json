@@ -75,7 +75,6 @@
   },
   "dependencies": {
     "classnames": "2.2.6",
-    "fantastical": "1.0.2",
     "react": "16.5.0",
     "react-decoration": "2.0.0",
     "react-dom": "16.5.0",
