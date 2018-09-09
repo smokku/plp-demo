@@ -1,5 +1,6 @@
 // @flow
 import * as React from 'react'
+import FlipMove from 'react-flip-move'
 import classNames from 'classnames'
 
 import CharacterItem from '../components/character-item'
@@ -22,12 +23,14 @@ class Listing extends React.PureComponent<Props> {
   render() {
     const { className, data } = this.props
     return (
-      <div uk-grid="" className={classNames('uk-grid-medium uk-grid-match', className)}>
-        {data.map(item => (
-          <div className="uk-width-auto" key={item.image}>
-            <CharacterItem {...item} />
-          </div>
-        ))}
+      <div uk-grid="" className={classNames('uk-grid-match', className)}>
+        <FlipMove>
+          {data.map(item => (
+            <div className="uk-width-auto" key={item.image}>
+              <CharacterItem {...item} />
+            </div>
+          ))}
+        </FlipMove>
       </div>
     )
   }
