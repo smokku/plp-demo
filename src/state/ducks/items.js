@@ -58,3 +58,12 @@ export function loadItemsData(): Action {
     type: LOAD_ITEMS_DATA,
   }
 }
+
+/**
+ * Select all items from Redux store.
+ * @param state - Redux state (whole).
+ * @returns Array of items.
+ */
+export function selectAllItems(state: { items: Items }): Items {
+  return state.items
+}

@@ -80,6 +80,7 @@
     "react-dom": "16.5.0",
     "react-redux": "5.0.7",
     "redux": "4.0.0",
+    "reselect": "^3.0.1",
     "uikit": "3.0.0-rc.9-dev.bd39d353"
   }
 }
