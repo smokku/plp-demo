@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import pkg from '../../package.json'
 import MultiDropdown from '../components/multi-dropdown'
 import SvgColorizer from '../components/svg-colorizer'
+import GithubRibbon from '../components/github-ribbon'
 import Listing from './listing'
 
 import { selectItemsFiltered } from '../state/selectors'
@@ -51,6 +52,7 @@ class Main extends React.PureComponent<Props> {
         </div>
         <hr className="uk-divider-icon" />
         <SvgColorizer />
+        <GithubRibbon />
       </div>
     )
   }
