@@ -10,6 +10,7 @@ const COLORS_ENUM = {
   Green: '#1e1',
   Yellow: '#fafa00',
   Purple: '#f2f',
+  Cyan: '#1ee',
 }
 
 export type Category = $Keys<typeof CATEGORIES_ENUM>
@@ -42,7 +43,7 @@ const randCategory = () => CATEGORIES[Math.floor(Math.random() * CATEGORIES.leng
 const randColors = () => {
   const colors = {}
   const basePrice = 50 + Math.floor(Math.random() * 10) * 10
-  let n = 3 + Math.floor(Math.random() * 3)
+  let n = 4 + Math.floor(Math.random() * 2)
   while (n > 0) {
     const color = COLORS[Math.floor(Math.random() * COLORS.length)]
     if (!colors[color]) {
