@@ -1,7 +1,21 @@
-.character-item .uk-card-body svg {
-  height: 5rem;
-  display: block;
-  margin: auto; }
+.character-item {
+  margin: 12px;
+  border: 1px #e5e5e5 solid; }
+  .character-item .uk-card-body svg {
+    height: 5rem;
+    display: block;
+    margin: auto; }
+
+.color-selector {
+  margin: 0 !important; }
+  .color-selector .color-button {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin: 2px; }
+    .color-selector .color-button.selected {
+      border: 2px #222 solid;
+      margin: 0; }
 
 @charset "UTF-8";
 /* ========================================================================
