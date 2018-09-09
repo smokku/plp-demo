@@ -15,8 +15,8 @@ export type Action = {
   +type: 'plp/items/LOAD_ITEMS_DATA',
 }
 
-const CATEGORIES = ['Good', 'Neutral', 'Evil'] // FIXME: fetch from store
-const COLORS = ['Red', 'Blue', 'Green', 'Gray', 'Yellow', 'Pink', 'Purple', 'Orange'] // FIXME: fetch from store
+const CATEGORIES = ['Good', 'Neutral', 'Evil']
+const COLORS = ['Red', 'Blue', 'Green', 'Gray', 'Yellow', 'Pink', 'Purple', 'Orange']
 
 const randCategory = () => CATEGORIES[Math.floor(Math.random() * CATEGORIES.length)]
 
@@ -60,9 +60,25 @@ export function loadItemsData(): Action {
 }
 
 /**
+ * Select all available category names..
+ * @returns - Array of category names.
+ */
+export function selectAllCategories() {
+  return CATEGORIES
+}
+
+/**
+ * Select all available color names.
+ * @returns - Array of color names.
+ */
+export function selectAllColors() {
+  return COLORS
+}
+
+/**
  * Select all items from Redux store.
  * @param state - Redux state (whole).
- * @returns Array of items.
+ * @returns - Array of items.
  */
 export function selectAllItems(state: { items: Items }): Items {
   return state.items
