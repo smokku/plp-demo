@@ -5,17 +5,20 @@ const LOAD_ITEMS_DATA = 'plp/items/LOAD_ITEMS_DATA'
 
 const CATEGORIES_ENUM = { Good: 1, Neutral: 2, Evil: 3 }
 const COLORS_ENUM = {
-  Red: '#123456',
-  Blue: '#123456',
-  Green: '#123456',
-  Yellow: '#123456',
-  Purple: '#123456',
+  Red: '#f22',
+  Blue: '#44f',
+  Green: '#1e1',
+  Yellow: '#fafa00',
+  Purple: '#f2f',
 }
 
 export type Category = $Keys<typeof CATEGORIES_ENUM>
 export const CATEGORIES: Array<Category> = Object.keys(CATEGORIES_ENUM)
 export type Color = $Keys<typeof COLORS_ENUM>
 export const COLORS: Array<Color> = Object.keys(COLORS_ENUM)
+export type Price = number
+
+export const mapColor = (color: Color) => COLORS_ENUM[color]
 
 export type BareItem = {
   +name: string,
@@ -26,7 +29,7 @@ export type FullItem = {
   +image: string,
   +svg: string,
   +category: Category,
-  +colors: Array<{ [Color]: number }>,
+  +colors: { [Color]: Price },
   +color?: Color,
 }
 
@@ -39,12 +42,15 @@ const randCategory = () => CATEGORIES[Math.floor(Math.random() * CATEGORIES.leng
 const randColors = () => {
   const colors = {}
   const basePrice = 50 + Math.floor(Math.random() * 10) * 10
-  let n = 4 + Math.floor(Math.random() * 3)
+  let n = 3 + Math.floor(Math.random() * 3)
   while (n > 0) {
     const color = COLORS[Math.floor(Math.random() * COLORS.length)]
     if (!colors[color]) {
-      colors[color] = basePrice + Math.floor(Math.random() * 5) * 5
-      n -= 1
+      const price = basePrice + Math.floor(Math.random() * 5) * 3
+      if (!Object.values(colors).includes(price)) {
+        colors[color] = price
+        n -= 1
+      }
     }
   }
   return colors

@@ -1,0 +1,13 @@
+.color-selector {
+  margin: 0 !important;
+  .color-button {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin: 2px;
+    &.selected {
+      border: 2px #222 solid;
+      margin: 0;
+    }
+  }
+}

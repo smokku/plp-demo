@@ -1,10 +1,13 @@
 // @flow
+/* eslint-disable no-shadow */
 import * as React from 'react'
 import classNames from 'classnames'
 
 import './character-item.scss'
 
-import type { Category, Color } from '../state/ducks/items'
+import ColorSelector from './color-selector'
+
+import type { Category, Color, Price } from '../state/ducks/items'
 
 type Props = {|
   className?: string,
@@ -12,12 +15,12 @@ type Props = {|
   image: string,
   svg: string,
   category: Category,
-  colors: Array<Color>,
+  colors: { [Color]: Price },
   color: Color,
 |}
 
 type State = {
-  color: Color,
+  color?: Color,
 }
 
 /**
@@ -28,19 +31,23 @@ class CharacterItem extends React.PureComponent<Props, State> {
     className: '',
   }
 
+  state = {
+    color: undefined,
+  }
+
   static getDerivedStateFromProps(props: Props, state: State) {
     return {
-      color: props.color || state.color,
+      color: state.color || props.color,
     }
   }
 
   render() {
     const {
-      className, name, image, svg, category,
+      className, name, image, svg, category, colors,
     } = this.props
-    const { color } = this.state
+    const { color = 'Red' } = this.state
     return (
-      <div className={classNames('character-item uk-card uk-card-default', className)}>
+      <div className={classNames('character-item uk-card uk-card-default uk-card-hover', className)}>
         <div className="uk-card-header">
           <h3 className="uk-card-title">{name}</h3>
         </div>
@@ -54,6 +61,19 @@ class CharacterItem extends React.PureComponent<Props, State> {
         />
         <div className="uk-card-footer">
           <h4>{category}</h4>
+          <ColorSelector
+            className="uk-align-left"
+            selected={color}
+            colors={Object.keys(colors)}
+            onSelect={color => this.setState({ color })}
+          />
+          <div className="uk-align-right">
+            <span role="img" aria-label="cash">
+              💰
+            </span>
+            {' '}
+            <span className="price">{colors[color]}</span>
+          </div>
         </div>
       </div>
     )
