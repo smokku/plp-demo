@@ -1,29 +1,32 @@
 // @flow
 import * as React from 'react'
+import classNames from 'classnames'
+
+import CharacterItem from '../components/character-item'
 
 import type { Item } from '../state/ducks/items'
 
 type Props = {|
-  className: string,
+  className?: string,
   data: Array<Item>,
 |}
 
 /**
- * Displays Item listing.
- *
- * @class Listing
- * @extends {React.PureComponent}
+ * Displays Item listing in a grid.
  */
 class Listing extends React.PureComponent<Props> {
+  static defaultProps = {
+    className: '',
+  }
+
   render() {
     const { className, data } = this.props
     return (
-      <div className={className}>
+      <div uk-grid="" className={classNames('uk-grid-medium uk-grid-match', className)}>
         {data.map(item => (
-          <span key={item.image}>
-            {item.name}
-            {' '}
-          </span>
+          <div className="uk-width-auto">
+            <CharacterItem {...item} />
+          </div>
         ))}
       </div>
     )

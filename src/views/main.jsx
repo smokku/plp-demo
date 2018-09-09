@@ -46,7 +46,10 @@ class Main extends React.PureComponent<Props> {
           </li>
         </ul>
         <hr className="uk-divider-icon" />
-        <Listing className="uk-margin-left uk-margin-right" data={items} />
+        <div className="uk-container">
+          <Listing data={items} />
+        </div>
+        <hr className="uk-divider-icon" />
       </div>
     )
   }

@@ -14,7 +14,7 @@ type State = {|
 |}
 
 /**
- * Dropdown allowinf multiple selection.
+ * Dropdown allowing multiple selection.
  */
 class MultiDropdown extends React.PureComponent<Props, State> {
   state = {
