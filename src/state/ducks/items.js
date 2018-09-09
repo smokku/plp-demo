@@ -6,6 +6,7 @@ const LOAD_ITEMS_DATA = 'plp/items/LOAD_ITEMS_DATA'
 export type Item = {
   +name: string,
   +image: string,
+  +svg?: string,
   +category?: string,
   +colors?: Array<{ [string]: number }>,
 }
