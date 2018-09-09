@@ -4,11 +4,11 @@ import ReactDOM from 'react-dom'
 import { Provider as ReduxProvider } from 'react-redux'
 import UIkit from 'uikit'
 import Icons from 'uikit/dist/js/uikit-icons'
+import 'uikit/dist/css/uikit.css'
 
 import configureStore from './state/store'
 import { loadItemsData } from './state/ducks/items'
 import Main from './views/main'
-import './index.scss'
 
 UIkit.use(Icons)
 

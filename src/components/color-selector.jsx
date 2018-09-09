@@ -3,7 +3,7 @@
 import * as React from 'react'
 import classNames from 'classnames'
 
-import './color-selector.scss'
+import styles from './color-selector.scss'
 
 import { mapColor } from '../state/ducks/items'
 
@@ -29,12 +29,12 @@ class ColorSelector extends React.PureComponent<Props> {
       className, selected, colors, onSelect,
     } = this.props
     return (
-      <div className={classNames('color-selector', className)}>
+      <div className={classNames(styles.self, className)}>
         {colors.map(color => (
           <a
             key={color}
             role="button"
-            className={classNames('color-button', { selected: color === selected })}
+            className={classNames(styles.button, { [styles.selected]: color === selected })}
             style={{ backgroundColor: mapColor(color) }}
             onClick={() => onSelect(color)}
           >

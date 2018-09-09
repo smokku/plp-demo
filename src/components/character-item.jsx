@@ -3,7 +3,7 @@
 import * as React from 'react'
 import classNames from 'classnames'
 
-import './character-item.scss'
+import styles from './character-item.scss'
 
 import ColorSelector from './color-selector'
 
@@ -47,7 +47,7 @@ class CharacterItem extends React.PureComponent<Props, State> {
     } = this.props
     const { color = 'Red' } = this.state
     return (
-      <div className={classNames('character-item uk-card uk-card-default uk-card-hover', className)}>
+      <div className={classNames(styles.self, 'uk-card uk-card-default uk-card-hover', className)}>
         <div className="uk-card-header">
           <h3 className="uk-card-title">{name}</h3>
         </div>
@@ -72,7 +72,7 @@ class CharacterItem extends React.PureComponent<Props, State> {
               💰
             </span>
             {' '}
-            <span className="price">{colors[color]}</span>
+            <span className={styles.price}>{colors[color]}</span>
           </div>
         </div>
       </div>
