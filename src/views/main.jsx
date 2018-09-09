@@ -4,20 +4,21 @@ import { connect } from 'react-redux'
 
 import pkg from '../../package.json'
 import MultiDropdown from '../components/multi-dropdown'
+import SvgColorizer from '../components/svg-colorizer'
 import Listing from './listing'
 
 import { selectItemsFiltered } from '../state/selectors'
 import { setCategoryFilters, setColorFilters } from '../state/ducks/filters'
 import { selectAllCategories, selectAllColors } from '../state/ducks/items'
 
-import type { Items } from '../state/ducks/items'
+import type { FullItem, Category, Color } from '../state/ducks/items'
 
 type Props = {|
   categories: Array<string>,
   colors: Array<string>,
-  items: Items,
-  setCategoryFilters: (Array<string>) => void,
-  setColorFilters: (Array<string>) => void,
+  items: Array<FullItem>,
+  setCategoryFilters: (Array<Category>) => void,
+  setColorFilters: (Array<Color>) => void,
 |}
 
 /**
@@ -49,6 +50,7 @@ class Main extends React.PureComponent<Props> {
           <Listing data={items} />
         </div>
         <hr className="uk-divider-icon" />
+        <SvgColorizer />
       </div>
     )
   }

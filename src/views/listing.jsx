@@ -5,11 +5,11 @@ import classNames from 'classnames'
 
 import CharacterItem from '../components/character-item'
 
-import type { Item } from '../state/ducks/items'
+import type { FullItem } from '../state/ducks/items'
 
 type Props = {|
   className?: string,
-  data: Array<Item>,
+  data: Array<FullItem>,
 |}
 
 /**
@@ -26,7 +26,7 @@ class Listing extends React.PureComponent<Props> {
       <div uk-grid="" className={classNames('uk-grid-match', className)}>
         <FlipMove>
           {data.map(item => (
-            <div className="uk-width-auto" key={item.image}>
+            <div className="uk-width-auto" key={`${item.image}-${item.color}`}>
               <CharacterItem {...item} />
             </div>
           ))}
