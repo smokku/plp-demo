@@ -11,6 +11,7 @@ import * as reducers from './ducks'
  */
 export default function configureStore(initialState: any = {}) {
   const rootReducer = combineReducers(reducers)
+  // $FlowFixMe
   return createStore(
     rootReducer,
     initialState,

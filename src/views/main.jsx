@@ -1,15 +1,14 @@
 // @flow
-
 import * as React from 'react'
 import { connect } from 'react-redux'
-import { createSelector } from 'reselect'
 
 import pkg from '../../package.json'
 import MultiDropdown from '../components/multi-dropdown'
 import Listing from './listing'
 
+import { selectItemsFiltered } from '../state/selectors'
 import { setCategoryFilters, setColorFilters } from '../state/ducks/filters'
-import { selectAllCategories, selectAllColors, selectAllItems } from '../state/ducks/items'
+import { selectAllCategories, selectAllColors } from '../state/ducks/items'
 
 import type { Items } from '../state/ducks/items'
 
@@ -56,11 +55,11 @@ class Main extends React.PureComponent<Props> {
 }
 
 export default connect(
-  createSelector([selectAllCategories, selectAllColors, selectAllItems], (categories, colors, items) => ({
-    categories,
-    colors,
-    items,
-  })),
+  state => ({
+    categories: selectAllCategories(),
+    colors: selectAllColors(),
+    items: selectItemsFiltered(state),
+  }),
   {
     setCategoryFilters,
     setColorFilters,

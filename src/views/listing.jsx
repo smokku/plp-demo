@@ -24,7 +24,7 @@ class Listing extends React.PureComponent<Props> {
     return (
       <div uk-grid="" className={classNames('uk-grid-medium uk-grid-match', className)}>
         {data.map(item => (
-          <div className="uk-width-auto">
+          <div className="uk-width-auto" key={item.image}>
             <CharacterItem {...item} />
           </div>
         ))}

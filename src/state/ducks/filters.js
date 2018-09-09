@@ -45,3 +45,21 @@ export function setColorFilters(filters: Filters): Action {
     filters,
   }
 }
+
+/**
+ * Select active category filters.
+ * @param state - Full Redux state.
+ * @returns - Array of categories.
+ */
+export function selectCategoryFilters(state: { filters: { categories: Filters } }) {
+  return state.filters.categories
+}
+
+/**
+ * Select active color filters.
+ * @param state - Full Redux state.
+ * @returns - Array of colors.
+ */
+export function selectColorFilters(state: { filters: { colors: Filters } }) {
+  return state.filters.colors
+}
