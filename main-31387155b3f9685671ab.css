@@ -1,3 +1,8 @@
+.character-item .uk-card-body svg {
+  height: 5rem;
+  display: block;
+  margin: auto; }
+
 @charset "UTF-8";
 /* ========================================================================
    Component: Base
