@@ -80,7 +80,8 @@
     "react-flip-move": "3.0.3",
     "react-redux": "5.1.1",
     "redux": "4.0.1",
+    "redux-thunk": "2.3.0",
     "reselect": "4.0.0",
-    "uikit": "3.0.0-rc.9-dev.bd39d353"
+    "uikit": "3.0.0-rc.22"
   }
 }
