@@ -2,7 +2,7 @@
 import * as React from 'react'
 
 const SvgColorizer = () => (
-  <svg style={{ display: 'none' }}>
+  <svg style={{ width: 0, height: 0, overflow: 'hidden' }}>
     <defs>
       <filter id="colorize-red" colorInterpolationFilters="sRGB">
         <feColorMatrix
