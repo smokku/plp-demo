@@ -6,6 +6,7 @@ import { selectCategoryFilters, selectColorFilters } from './ducks/filters'
 
 const MAX_RETURNED_ITEMS = 42
 
+// $FlowFixMe: need to properly type the Store
 export const selectItemsFiltered = createSelector(
   [selectCategoryFilters, selectColorFilters, selectAllItems],
   (categoriesFilter, colorsFilter, allItems) => {

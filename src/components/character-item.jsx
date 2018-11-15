@@ -16,7 +16,7 @@ type Props = {|
   svg: string,
   category: Category,
   colors: { [Color]: Price },
-  color: Color,
+  color: Color, // eslint-disable-line react/no-unused-prop-types, // remove once rule supports getDerivedStateFromProps
 |}
 
 type State = {
@@ -53,7 +53,7 @@ class CharacterItem extends React.PureComponent<Props, State> {
         </div>
         <div
           className="uk-card-body"
-          dangerouslySetInnerHTML={{ __html: svg }}
+          dangerouslySetInnerHTML={{ __html: svg } /* eslint-disable-line react/no-danger */}
           alt={image}
           style={{
             filter: `url(#colorize-${color.toLowerCase()})`,

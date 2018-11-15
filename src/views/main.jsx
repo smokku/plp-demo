@@ -12,14 +12,14 @@ import { selectItemsFiltered } from '../state/selectors'
 import { setCategoryFilters, setColorFilters } from '../state/ducks/filters'
 import { selectAllCategories, selectAllColors } from '../state/ducks/items'
 
-import type { FullItem, Category, Color } from '../state/ducks/items'
+import type { FullItem } from '../state/ducks/items'
 
 type Props = {|
   categories: Array<string>,
   colors: Array<string>,
   items: Array<FullItem>,
-  setCategoryFilters: (Array<Category>) => void,
-  setColorFilters: (Array<Color>) => void,
+  setCategoryFilters: (Array<string>) => void,
+  setColorFilters: (Array<string>) => void,
 |}
 
 /**
@@ -58,6 +58,7 @@ class Main extends React.PureComponent<Props> {
   }
 }
 
+// $FlowFixMe: replace with connect<...>(...) as soon eslint-babel supports it
 export default connect(
   state => ({
     categories: selectAllCategories(),

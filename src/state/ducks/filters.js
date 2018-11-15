@@ -1,20 +1,32 @@
 // @flow
 import { combineReducers } from 'redux'
+import type { Reducer } from 'redux'
 
 const types = {
   SET_CATEGORY_FILTERS: 'plp/filters/SET_CATEGORY_FILTERS',
   SET_COLOR_FILTERS: 'plp/filters/SET_COLOR_FILTERS',
 }
 
-export type Filters = Array<string>
+type Filter = $Values<typeof types>
+
+export type Filters = Array<Filter>
 
 export type Action = {
   +type: $Values<typeof types>,
-  +filters: Array<string>,
+  +filters: Filters,
 }
 
-const filtersReducer = type => (state: Filters = [], action: Action): Filters => (type === action.type ? action.filters : state)
+/**
+ * Build reducer for specific Filter.
+ *
+ * @param type - Filter type.
+ * @returns Reducer for Filter.
+ */
+function filtersReducer(type: Filter): Reducer<Filters, Action> {
+  return (state = [], action) => (type === action.type ? action.filters : state)
+}
 
+// $FlowFixMe: replace with combineReducers<Object, Action> as soon eslint-babel supports it
 const reducer = combineReducers({
   categories: filtersReducer(types.SET_CATEGORY_FILTERS),
   colors: filtersReducer(types.SET_COLOR_FILTERS),
