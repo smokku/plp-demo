@@ -1,4 +1,4 @@
-/*! UIkit 3.0.0-rc.22 | http://www.getuikit.com | (c) 2014 - 2018 YOOtheme | MIT License */
+/*! UIkit 3.0.0-rc.17-dev.21a39413 | http://www.getuikit.com | (c) 2014 - 2018 YOOtheme | MIT License */
 /* ========================================================================
    Component: Base
  ========================================================================== */
@@ -58,15 +58,15 @@ a:hover,
 /* Text-level semantics
  ========================================================================== */
 /*
- * 1. Add an underline text decoration in Safari, Edge and IE.
- * 2. Add `dotted` style in Safari.
- * Note: The shorthand declaration `underline dotted` is not supported in Safari, Edge and IE.
+ * 1. Remove the bottom border in Chrome 57-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
   /* 1 */
-  text-decoration: underline;
+  border-bottom: none;
   /* 2 */
-  -webkit-text-decoration-style: dotted;
+  text-decoration: underline;
+  text-decoration: underline dotted;
 }
 /*
  * Add the correct font weight in Chrome, Edge, and Safari.
@@ -161,6 +161,7 @@ video {
  * 3. Corrects responsive `max-width` behavior if padding and border are used.
  * 4. Exclude SVGs for IE11 because they don't preserve their aspect ratio.
  */
+audio,
 canvas,
 img,
 video {
@@ -750,7 +751,7 @@ a.uk-link-reset:hover,
 }
 /*
  * Bullet
- * 1. Reset display `table` which causes issues in combination with multi column layouts.
+ * 1. Reset display table which causes issues in combination with multi column layouts
  */
 .uk-list-bullet > li {
   position: relative;
@@ -1059,10 +1060,10 @@ button.uk-icon:not(:disabled) {
 /*
  * Set the fill and stroke color of all SVG elements to the current text color
  */
-.uk-icon:not(.uk-preserve) [fill*='#']:not(.uk-preserve) {
+.uk-icon [fill*='#']:not(.uk-preserve) {
   fill: currentcolor;
 }
-.uk-icon:not(.uk-preserve) [stroke*='#']:not(.uk-preserve) {
+.uk-icon [stroke*='#']:not(.uk-preserve) {
   stroke: currentcolor;
 }
 /*
@@ -5528,7 +5529,7 @@ ul.uk-nav-sub {
 .uk-offcanvas-overlay.uk-open::before {
   opacity: 1;
 }
-/* Prevent scrolling
+/* Container
  ========================================================================== */
 /*
  * Prevent horizontal scrollbar when the content is slide-out
@@ -5538,37 +5539,47 @@ ul.uk-nav-sub {
 .uk-offcanvas-container {
   overflow-x: hidden;
 }
-/* Container
+/*
+ * Prevent all scrollbars if overlay is used
+ */
+.uk-offcanvas-container-overlay {
+  overflow: hidden;
+}
+/* Content
  ========================================================================== */
 /*
  * Prepare slide-out animation (Used in reveal and push mode)
  * Using `position: left` instead of `transform` because position `fixed` elements like sticky navbars
  * lose their fixed state and behaves like `absolute` within a transformed container
- * 1. Provide a fixed width and prevent shrinking
+ * Note: JS sets a fixed width and height so the page can slide-out without shrinking
+ * 1. Smooth scrolling
  */
-.uk-offcanvas-container {
+.uk-offcanvas-container .uk-offcanvas-content {
   position: relative;
   left: 0;
   transition: left 0.3s ease-out;
   /* 1 */
-  box-sizing: border-box;
-  width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+/* Disable scrolling if overlay mode */
+.uk-offcanvas-overlay .uk-offcanvas-content {
+  overflow-y: hidden;
 }
 /*
  * Activate slide-out animation
  */
-:not(.uk-offcanvas-flip).uk-offcanvas-container-animation {
+:not(.uk-offcanvas-flip) > .uk-offcanvas-content-animation {
   left: 270px;
 }
-.uk-offcanvas-flip.uk-offcanvas-container-animation {
+.uk-offcanvas-flip > .uk-offcanvas-content-animation {
   left: -270px;
 }
 /* Tablet landscape and bigger */
 @media (min-width: 960px) {
-  :not(.uk-offcanvas-flip).uk-offcanvas-container-animation {
+  :not(.uk-offcanvas-flip) > .uk-offcanvas-content-animation {
     left: 350px;
   }
-  .uk-offcanvas-flip.uk-offcanvas-container-animation {
+  .uk-offcanvas-flip > .uk-offcanvas-content-animation {
     left: -350px;
   }
 }
@@ -6965,9 +6976,6 @@ ul.uk-nav-sub {
 .uk-text-muted {
   color: #999 !important;
 }
-.uk-text-emphasis {
-  color: #333 !important;
-}
 .uk-text-primary {
   color: #1e87f0 !important;
 }
@@ -7696,6 +7704,7 @@ iframe.uk-cover {
  * Because `img, `video`, `canvas` and  `audio` are already responsive by default, see Base component
  */
 .uk-preserve-width,
+.uk-preserve-width audio,
 .uk-preserve-width canvas,
 .uk-preserve-width img,
 .uk-preserve-width svg,
@@ -11691,19 +11700,6 @@ iframe.uk-cover {
 .uk-overlay-primary .uk-text-muted,
 .uk-offcanvas-bar .uk-text-muted {
   color: rgba(255, 255, 255, 0.5) !important;
-}
-.uk-light .uk-text-emphasis,
-.uk-section-primary:not(.uk-preserve-color) .uk-text-emphasis,
-.uk-section-secondary:not(.uk-preserve-color) .uk-text-emphasis,
-.uk-tile-primary:not(.uk-preserve-color) .uk-text-emphasis,
-.uk-tile-secondary:not(.uk-preserve-color) .uk-text-emphasis,
-.uk-card-primary.uk-card-body .uk-text-emphasis,
-.uk-card-primary > :not([class*='uk-card-media']) .uk-text-emphasis,
-.uk-card-secondary.uk-card-body .uk-text-emphasis,
-.uk-card-secondary > :not([class*='uk-card-media']) .uk-text-emphasis,
-.uk-overlay-primary .uk-text-emphasis,
-.uk-offcanvas-bar .uk-text-emphasis {
-  color: #fff !important;
 }
 .uk-light .uk-text-primary,
 .uk-section-primary:not(.uk-preserve-color) .uk-text-primary,
