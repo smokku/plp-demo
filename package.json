@@ -82,6 +82,6 @@
     "redux": "4.0.1",
     "redux-thunk": "2.3.0",
     "reselect": "4.0.0",
-    "uikit": "3.0.0-rc.22"
+    "uikit": "3.0.0-rc.17-dev.21a39413"
   }
 }
