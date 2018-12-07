@@ -386,7 +386,7 @@ blockquote footer {
   color: #666;
 }
 blockquote footer::before {
-  content: "\2014   ";
+  content: "— ";
 }
 /* Preformatted text
  ========================================================================== */
