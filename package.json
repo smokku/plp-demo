@@ -42,7 +42,7 @@
     "enzyme-adapter-react-16": "1.14.0",
     "enzyme-to-json": "3.4.0",
     "eslint": "5.16.0",
-    "eslint-config-airbnb": "17.1.1",
+    "eslint-config-airbnb": "18.0.1",
     "eslint-config-react": "1.1.7",
     "eslint-config-standard": "13.0.1",
     "eslint-config-standard-jsdoc": "0.3.2",
