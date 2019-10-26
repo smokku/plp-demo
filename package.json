@@ -77,7 +77,7 @@
     "react": "16.11.0",
     "react-decoration": "2.1.0",
     "react-dom": "16.11.0",
-    "react-flip-move": "3.0.3",
+    "react-flip-move": "3.0.4",
     "react-redux": "7.1.1",
     "redux": "4.0.4",
     "redux-thunk": "2.3.0",
