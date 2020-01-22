@@ -32,7 +32,7 @@
     "@babel/preset-react": "7.8.3",
     "autobind-decorator": "2.4.0",
     "babel-core": "7.0.0-bridge.0",
-    "babel-eslint": "8.1.1",
+    "babel-eslint": "10.0.3",
     "babel-jest": "25.1.0",
     "babel-loader": "8.0.6",
     "css-loader": "3.4.2",
