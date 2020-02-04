@@ -11,7 +11,7 @@ export const selectItemsFiltered = createSelector(
   [selectCategoryFilters, selectColorFilters, selectAllItems],
   (categoriesFilter, colorsFilter, allItems) => {
     const items = []
-    allItems.filter(item => categoriesFilter.length === 0 || categoriesFilter.includes(item.category)).forEach((item) => {
+    allItems.filter((item) => categoriesFilter.length === 0 || categoriesFilter.includes(item.category)).forEach((item) => {
       Object.keys(item.colors).forEach((color) => {
         if (items.length < MAX_RETURNED_ITEMS && (colorsFilter.length === 0 || colorsFilter.includes(color))) {
           items.push({

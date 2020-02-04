@@ -60,7 +60,7 @@ class Main extends React.PureComponent<Props> {
 
 // $FlowFixMe: replace with connect<...>(...) as soon eslint-babel supports it
 export default connect(
-  state => ({
+  (state) => ({
     categories: selectAllCategories(),
     colors: selectAllColors(),
     items: selectItemsFiltered(state),

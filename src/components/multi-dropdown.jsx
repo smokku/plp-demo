@@ -25,7 +25,7 @@ class MultiDropdown extends React.PureComponent<Props, State> {
     e.preventDefault()
     this.setState(
       ({ selected }) => ({
-        selected: selected.includes(opt) ? selected.filter(item => item !== opt) : selected.concat(opt),
+        selected: selected.includes(opt) ? selected.filter((item) => item !== opt) : selected.concat(opt),
       }),
       () => this.props.onSelect(this.state.selected), // eslint-disable-line react/destructuring-assignment
     )
@@ -36,7 +36,7 @@ class MultiDropdown extends React.PureComponent<Props, State> {
     const { selected } = this.state
 
     return (
-      <React.Fragment>
+      <>
         <a>
           {name}
           {' '}
@@ -44,9 +44,9 @@ class MultiDropdown extends React.PureComponent<Props, State> {
         </a>
         <div uk-dropdown="mode: click;">
           <ul className="uk-nav uk-dropdown-nav">
-            {options.map(opt => (
+            {options.map((opt) => (
               <li key={opt}>
-                <a role="button" onClick={e => this.onItemClicked(e, opt)}>
+                <a role="button" onClick={(evt) => this.onItemClicked(evt, opt)}>
                   {opt}
                   {' '}
                   {selected.includes(opt) ? <span uk-icon="icon: check" /> : null}
@@ -55,7 +55,7 @@ class MultiDropdown extends React.PureComponent<Props, State> {
             ))}
           </ul>
         </div>
-      </React.Fragment>
+      </>
     )
   }
 }

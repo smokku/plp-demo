@@ -25,8 +25,9 @@ class Listing extends React.PureComponent<Props> {
     return (
       <div uk-grid="" className={classNames('uk-grid-match', className)}>
         <FlipMove>
-          {data.map(item => (
+          {data.map((item) => (
             <div className="uk-width-auto" key={`${item.image}-${item.color || ''}`}>
+              {/* $FlowFixMe */}
               <CharacterItem {...item} />
             </div>
           ))}

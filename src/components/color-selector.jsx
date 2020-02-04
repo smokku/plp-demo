@@ -30,7 +30,7 @@ class ColorSelector extends React.PureComponent<Props> {
     } = this.props
     return (
       <div className={classNames(styles.self, className)}>
-        {colors.map(color => (
+        {colors.map((color) => (
           <a
             key={color}
             role="button"
@@ -38,7 +38,7 @@ class ColorSelector extends React.PureComponent<Props> {
             style={{ backgroundColor: mapColor(color) }}
             onClick={() => onSelect(color)}
           >
-            {''}
+            {' '}
           </a>
         ))}
       </div>

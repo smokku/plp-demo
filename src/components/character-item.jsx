@@ -16,7 +16,7 @@ type Props = {|
   svg: string,
   category: Category,
   colors: { [Color]: Price },
-  color: Color, // eslint-disable-line react/no-unused-prop-types, // remove once rule supports getDerivedStateFromProps
+  color: Color, // eslint-disable-line react/no-unused-prop-types
 |}
 
 type State = {
@@ -65,7 +65,7 @@ class CharacterItem extends React.PureComponent<Props, State> {
             className="uk-align-left"
             selected={color}
             colors={Object.keys(colors)}
-            onSelect={color => this.setState({ color })}
+            onSelect={(color) => this.setState({ color })}
           />
           <div className="uk-align-right">
             <span role="img" aria-label="cash">

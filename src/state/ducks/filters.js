@@ -36,6 +36,7 @@ export default reducer
 
 /**
  * SET_CATEGORY_FILTERS action creator.
+ *
  * @param filters - Filters to set.
  * @returns Redux action.
  */
@@ -48,6 +49,7 @@ export function setCategoryFilters(filters: Filters): Action {
 
 /**
  * SET_COLOR_FILTERS action creator.
+ *
  * @param filters - Filters to set.
  * @returns Redux action.
  */
@@ -60,6 +62,7 @@ export function setColorFilters(filters: Filters): Action {
 
 /**
  * Select active category filters.
+ *
  * @param state - Full Redux state.
  * @returns - Array of categories.
  */
@@ -69,6 +72,7 @@ export function selectCategoryFilters(state: { filters: { categories: Filters } 
 
 /**
  * Select active color filters.
+ *
  * @param state - Full Redux state.
  * @returns - Array of colors.
  */

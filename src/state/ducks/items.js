@@ -60,9 +60,9 @@ const randColors = () => {
 const reducer = (state: Array<FullItem> = [], action: Action): Array<FullItem> => {
   switch (action.type) {
     case LOAD_ITEMS_DATA:
-      return characters.map(item => ({
+      return characters.map((item) => ({
         ...item,
-        // eslint-disable-next-line global-require, import/no-dynamic-require, $FlowFixMe
+        /* eslint-disable-next-line global-require, import/no-dynamic-require */ // $FlowFixMe
         svg: require(`../../data/svg/${item.image}.svg`),
         category: randCategory(),
         colors: randColors(),
@@ -76,6 +76,7 @@ export default reducer
 
 /**
  * LOAD_ITEMS_DATA action creator.
+ *
  * @returns Redux action.
  */
 export function loadItemsData(): Action {
@@ -86,6 +87,7 @@ export function loadItemsData(): Action {
 
 /**
  * Select all available category names..
+ *
  * @returns - Array of category names.
  */
 export function selectAllCategories() {
@@ -94,6 +96,7 @@ export function selectAllCategories() {
 
 /**
  * Select all available color names.
+ *
  * @returns - Array of color names.
  */
 export function selectAllColors() {
@@ -102,6 +105,7 @@ export function selectAllColors() {
 
 /**
  * Select all items from Redux store.
+ *
  * @param state - Redux state (whole).
  * @returns - Array of items.
  */
