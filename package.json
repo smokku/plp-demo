@@ -75,9 +75,9 @@
   },
   "dependencies": {
     "classnames": "2.2.6",
-    "react": "17.0.0",
+    "react": "17.0.1",
     "react-decoration": "2.1.0",
-    "react-dom": "17.0.0",
+    "react-dom": "17.0.1",
     "react-flip-move": "3.0.4",
     "react-redux": "7.2.1",
     "redux": "4.0.5",
