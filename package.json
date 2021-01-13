@@ -58,7 +58,7 @@
     "eslint-plugin-promise": "4.2.1",
     "eslint-plugin-react": "7.22.0",
     "eslint-plugin-standard": "4.1.0",
-    "eslint-plugin-unicorn": "18.0.1",
+    "eslint-plugin-unicorn": "26.0.1",
     "file-loader": "6.2.0",
     "flow-bin": "0.133.0",
     "html-webpack-plugin": "4.5.1",
